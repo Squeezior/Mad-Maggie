@@ -1,0 +1,268 @@
+/* CSS Variables */
+:root {
+	--primary: #ddd;
+	--dark: #333;
+	--light: #fff;
+	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--dark);
+	justify-content: center;
+}
+
+body {
+	background-color: #ccc;
+	margin: 30px 50px;
+	line-height: 1.4;
+}
+
+.wrapper {
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+	width: 50%;
+	max-width: 50%;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-auto-rows: minmax(50px, auto);
+	grid-template-areas:
+		'rep rep'
+		'name buttons'
+		'points rewards';
+	justify-content: center;
+	height: 500px;
+}
+
+img {
+	float: left;
+}
+
+/* Rep Section */
+.rep {
+	grid-area: rep;
+	justify-self: end;
+	align-self: end;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+	align-items: center;
+	/* height: 50px; */
+	/* padding-top: 5%; */
+	margin: 0;
+}
+
+.good-rep {
+	background: var(--dark);
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	box-shadow: var(--shadow);
+	width: 210px;
+	margin: 0;
+}
+
+.bad-rep {
+	background: var(--dark);
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	box-shadow: var(--shadow);
+	width: 210px;
+}
+
+.terrible-rep {
+	background: var(--dark);
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	box-shadow: var(--shadow);
+	width: 210px;
+}
+
+/* Names Section */
+.names-left {
+	display: grid;
+	gap: 10px;
+	margin-right: 10px;
+	height: 290px;
+}
+
+.name {
+	font-size: 1rem;
+	font-weight: 600;
+	background: var(--primary);
+	color: var(--dark);
+
+	text-decoration: none;
+	text-align: center;
+	justify-items: stretch;
+	align-items: stretch;
+
+	text-transform: uppercase;
+	box-shadow: var(--shadow);
+	height: 50px;
+}
+
+p.name {
+	text-align: center;
+}
+
+/* Button Section */
+
+.btn-container {
+	grid-area: buttons;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+	grid-auto-columns: 210px;
+}
+
+.btn {
+	background-color: var(--dark);
+	color: var(--light);
+	/* padding: 5% 5%; */
+	text-decoration: none;
+	border: 0;
+	align-self: center;
+	justify-self: center;
+	max-height: 100px;
+	max-width: 210px;
+	width: 210px;
+	height: 50px;
+	font-weight: 600;
+}
+
+.good {
+	color: rgb(50, 143, 75);
+}
+
+.good:hover {
+	color: rgb(72, 202, 107);
+}
+
+.good-rep {
+	color: rgb(50, 143, 75);
+}
+
+.bad {
+	color: rgb(206, 116, 26);
+}
+
+.bad:hover {
+	color: rgb(255, 145, 35);
+}
+
+.bad-rep {
+	color: rgb(206, 116, 26);
+}
+
+.terrible {
+	color: rgb(192, 27, 27);
+}
+
+.terrible:hover {
+	color: rgb(255, 31, 31);
+}
+
+.terrible-rep {
+	color: rgb(192, 27, 27);
+}
+
+/*
+.btn-clicked {
+	background-color: rgb(22, 22, 22);
+	outline: 2px inset #473838;
+	outline-offset: 2px;
+	color: rgba(255, 255, 255, 0.25);
+}
+*/
+
+[data-clicked='true'] {
+	color: darken(green, 20%);
+	background-color: rgb(22, 22, 22);
+	outline: 2px inset #473838;
+	outline-offset: 2px;
+	color: rgba(255, 255, 255, 0.25);
+}
+[data-clicked='false'] {
+	color: darken(rgb(0, 0, 0), 20%);
+	border: 2px solid rgb(0, 0, 0);
+}
+
+/* Points Section */
+.points {
+	grid-area: points;
+	display: grid;
+	height: 100px;
+	align-items: center;
+	justify-items: center;
+	padding-right: 10px;
+}
+
+.friendship-label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--primary);
+	text-decoration: none;
+	text-align: center;
+	color: var(--dark);
+	text-transform: uppercase;
+	box-shadow: var(--shadow);
+	width: 100%;
+	margin: 0;
+	height: 40px;
+}
+
+p.friendship--pts {
+	border: 4px solid rgba(10, 38, 56, 0.28);
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background-color: var(--primary);
+	font-size: 16px;
+	font-weight: 600;
+}
+
+/* Rewards Section */
+.reward {
+	grid-area: rewards;
+	display: grid;
+	height: 100px;
+	align-items: center;
+	justify-items: center;
+	text-align: center;
+}
+
+.reward-label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--primary);
+	text-decoration: none;
+	text-align: center;
+	color: var(--dark);
+	text-transform: uppercase;
+	box-shadow: var(--shadow);
+	width: 100%;
+	height: 40px;
+	margin: 0;
+}
+
+.reward-display {
+	border: 4px solid rgba(10, 38, 56, 0.28);
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background-color: var(--primary);
+	font-size: 16px;
+	font-weight: 600;
+}

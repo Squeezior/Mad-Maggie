@@ -130,6 +130,61 @@ body {
   }
 }
 
+@media screen and (max-width: 430px) {
+  .header {
+    display: flex;
+    font-size: 1rem;
+    letter-spacing: 0.4rem;
+  }
+  img {
+    min-height: 0.5rem;
+  }
+  .main__btns-container .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1rem;
+    font-size: 0.8rem;
+    margin: 0.2rem;
+  }
+  .wrapper .behaviour {
+    font-size: 1rem;
+  }
+
+  .main .main__npc-container {
+    min-height: 6rem;
+  }
+
+  .main .main__npc-container .main__img-name-container .img {
+    margin: 0;
+    max-width: 5rem;
+  }
+  .main .main__npc-container .main__img-name-container img {
+    display: flex;
+    align-self: center;
+    min-height: 1rem;
+    max-width: 4.5rem;
+    border-radius: 999px;
+  }
+  .main .main__npc-container .main__img-name-container .name {
+    display: flex;
+    /* align-self: center; */
+    min-height: 1rem;
+    max-width: 3rem;
+    border-radius: 999px;
+    align-items: center;
+  }
+
+  .name span {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+  .footer .points,
+  .reward {
+    font-size: 1.5rem;
+  }
+}
+
 .behaviour {
   display: flex;
   justify-content: center;
